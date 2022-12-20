@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="pet-shop">
+        <div class="background-opacity" id="background-opacity"></div>
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <span>
+                    <small>Frete Grátis - <strong>Acima R$ 299</strong> - Sul e Sudeste</small>
+                </span>
+                <div class="separator"></div>
+                <span>
+                    <small>Não serviu? <strong>A primeira troca</strong> é grátis</small>
+                </span>
+                <div class="separator"></div>
+                <span>
+                    <small><strong>10%</strong> de desconto no boleto</small>
+                </span>
+                <div class="separator"></div>
+                <span>
+                    <small>Pague em até <strong>10x sem juros</strong></small>
+                </span>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="menu-logo">
+                <img src="./assets/logo.png" alt="Logo Pet Shop" />
+            </div>
+            <nav class="menu-items">
+                <span class="menu-item">Rações</span>
+                <span class="menu-item">Acessórios</span>
+                <span class="menu-item">Kits</span>
+                <span class="menu-item">Combos</span>
+                <span class="menu-item">Promoções</span>
+            </nav>
+            <div class="menu-actions">
+                <div class="menu-actions-item">
+                    <img src="./assets/search.png" alt="Search Icon">
+                </div>
+                <div class="menu-actions-item">
+                    <small>1</small>
+                    <img src="./assets/wish.png" alt="Wish Icon">
+                </div>
+                <div class="menu-actions-item" class="teste" id="cart-button" onclick="openModal()">
+                    <small id="menu-actions-number-items">0</small>
+                    <img src="./assets/cart.png" alt="Cart Icon">
+                </div>
+            </div>
+        </div>
+        <main class="main-banner">
+            <img src="./assets/full-banner.png" alt="">
+        </main>
+        <div class="products-session">
+            <div class="products-session-title">
+                <h1>Os Nossos Queridinhos</h1>
+                <small>produtos escolhidos com carinho pra você!</small>
+            </div>
+            <div class="products-session-items">
+                <div class="products-session-items-banner">
+                    <img src="./assets/side-banner-1.png" alt="" />
+                </div>
+                <div class="products-session-items-products">
+                    <div class="products-session-items-product">
+                        <img src="./assets/product-1.png" alt="">
+                        <h4>Morbi Condimentum egestas quam - 3m</h4>
+                        <img class="products-session-items-product-rate" src="./assets/rate.png" alt="" />
+                        <span><strong>R$18,90</strong> <small><s>R$35,90</s></small></span>
+                        <button onclick="btnComprar()">COMPRAR</button>
+                    </div>
+                    <div class="products-session-items-product">
+                        <img src="./assets/product-2.png" alt="">
+                        <h4>Vivamus quam ex, ultricies et blandit sed</h4>
+                        <img class="products-session-items-product-rate" src="./assets/rate.png" alt="" />
+                        <span><strong>R$18,90</strong> <small><s>R$35,90</s></small></span>
+                        <button>COMPRAR</button>
+                    </div>
+                </div>
+            </div>
+            <div class="products-session-items">
+                <div class="products-session-items-banner">
+                    <img src="./assets/side-banner-2.png" alt="" />
+                </div>
+                <div class="products-session-items-products">
+                    <div class="products-session-items-product">
+                        <img src="./assets/product-1.png" alt="">
+                        <h4>Morbi Condimentum egestas quam - 3m</h4>
+                        <img class="products-session-items-product-rate" src="./assets/rate.png" alt="" />
+                        <span><strong>R$18,90</strong> <small><s>R$35,90</s></small></span>
+                        <button>COMPRAR</button>
+
+                    </div>
+                    <div class="products-session-items-product">
+                        <img src="./assets/product-2.png" alt="">
+                        <h4>Vivamus quam ex, ultricies et blandit sed</h4>
+                        <img class="products-session-items-product-rate" src="./assets/rate.png" alt="" />
+                        <span><strong>R$18,90</strong> <small><s>R$35,90</s></small></span>
+                        <button>COMPRAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart" id="cart">
+            <div class="cart-title">
+                <h3>MINHA SACOLA</h3>
+                <span onclick="openModal()">x</span>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <div class="cart-item"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

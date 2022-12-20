@@ -1,0 +1,252 @@
+body {
+    height: auto;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    overflow-x: hidden;
+    margin: 0;
+}
+.pet-shop {
+    position: relative;
+    max-width: 100vw;
+    .top-bar {
+        width: 100vw;
+        background-color: #eda56a;
+        .top-bar-content {
+            font-size: 1em;
+            color: #fff;
+            max-width: 1250px;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 0 auto;
+            height: auto;
+            padding: 10px 0;
+        }
+        .separator {
+            width: 1px;
+            height: 20px;
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    }
+    .menu {
+    z-index: 2;
+        max-width: 1250px;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-around;
+        align-items: center;
+        height: auto;
+        padding: 30px 0;
+
+        .menu-items {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+
+            .menu-item {
+                &:nth-child(5) {
+                    padding: 8px;
+                    background-color: #febf26;
+                    color: #fff;
+                }
+            }
+        }
+        .menu-actions {
+            display: flex;
+            gap: 20px;
+
+            .menu-actions-item {
+                position: relative;
+                transition: 0.3s;
+                cursor: pointer;
+                small {
+                    color: #fff;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 18px;
+                    height: 18px;
+                    font-size: 9px;
+                    background-color: #ee6a03;
+                    border-radius: 50%;
+                    top: -5px;
+                    right: -10px;
+                    position: absolute;
+                    z-index: 1;
+                }
+            }
+            .menu-actions-item:hover {
+                transform: scale(1.1);
+                transition: 0.3s;
+            }
+        }
+    }
+    .main-banner {
+        display: flex;
+        justify-content: center;
+        max-width: 100vw;
+        img {
+            margin: 0 auto;
+        }
+    }
+    .products-session {
+        width: 1250px;
+        margin: 0 auto;
+
+        .products-session-title {
+            text-align: center;
+            position: relative;
+            justify-content: center;
+            height: auto;
+            padding: 30px 0;
+
+            h1 {
+                color: #4e4d4d;
+                font-weight: bold;
+                line-height: 20px;
+            }
+            small {
+                color: #919191;
+            }
+        }
+        .products-session-items {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin: 50px 0;
+
+            .products-session-items-products {
+                display: flex;
+                min-width: 635px;
+                gap: 35px;
+
+                .products-session-items-product {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                    margin: 0 auto;
+                    z-index: 1;
+
+                    .products-session-items-product-rate {
+                        width: 100px;
+                    }
+                    img {
+                        width: 300px;
+                    }
+                    h4 {
+                        margin: 0;
+                        color: #919191;
+                        font-weight: 500;
+                    }
+                    span {
+                        display: flex;
+                        gap: 20px;
+                        small {
+                            color: #919191;
+                        }
+                    }
+                    button {
+                        margin: 10px 0;
+                        font-size: 12px;
+                        color: #fff;
+                        padding: 10px 20px;
+                        border-radius: 30px;
+                        transition: 0.5s;
+                        opacity: 0;
+                        border: none;
+                        background-color: #ee6a03;
+                        cursor: pointer;
+                    }
+                }
+                .products-session-items-product:hover {
+                    button {
+                        opacity: 1;
+                        transition: 0.5s;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+        }
+    }
+    .cart {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 300px;
+        margin-right: -400px;
+        background-color: #fff;
+        transition: 1s;
+        animation: closeModalAnimation 0.5s ease-in-out;
+
+        .cart-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 93%;
+            margin: 0 auto;
+            border-bottom: 1px solid #000;
+
+            span {
+                font-weight: bold;
+                font-size: 19px;
+                padding: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+    .background-opacity {
+        position: fixed;
+        top: 0;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+        transition: 1s;    }
+    .background-opacity-open {
+        position: fixed;
+        top: 0;
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100vw;
+        height: 100vh;
+        z-index: 2;
+        transition: 1s;
+    }
+    .cart-open {
+        margin-right: 0;
+        transition: 1s;
+        z-index: 3;
+        animation: openModalAnimation 0.5s ease-in-out;
+    }
+    @keyframes opacitor {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+    @keyframes openModalAnimation {
+        from {
+            margin-right: -400px;
+        }
+        to {
+            margin-right: 0;
+        }
+    }
+    @keyframes closeModalAnimation {
+        from {
+            margin-right: 0;
+        }
+        to {
+            margin-right: -400px;
+        }
+    }
+}
