@@ -1,0 +1,28 @@
+{
+    "products": [
+        {
+            "img": "./assets/product-1.png",
+            "productName": "Morbi Condimentum egestas quam - 3m",
+            "productPrice": "R$18,90",
+            "productOldPrice": "R$35,90"
+        },
+        {
+            "img": "./assets/product-1.png",
+            "productName": "Morbi Condimentum egestas quam - 3m",
+            "productPrice": "R$18,90",
+            "productOldPrice": "R$35,90"
+        },
+        {
+            "img": "./assets/product-1.png",
+            "productName": "Morbi Condimentum egestas quam - 3m",
+            "productPrice": "R$18,90",
+            "productOldPrice": "R$35,90"
+        },
+        {
+            "img": "./assets/product-1.png",
+            "productName": "Morbi Condimentum egestas quam - 3m",
+            "productPrice": "R$18,90",
+            "productOldPrice": "R$35,90"
+        }
+    ]
+}

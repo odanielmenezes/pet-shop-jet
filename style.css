@@ -164,8 +164,9 @@ body {
   flex-direction: row-reverse;
 }
 .pet-shop .cart {
-  position: fixed;
+  overflow: auto;
   right: 0;
+  position: fixed;
   top: 0;
   height: 100vh;
   width: 300px;
@@ -174,6 +175,15 @@ body {
   transition: 1s;
   -webkit-animation: closeModalAnimation 0.5s ease-in-out;
           animation: closeModalAnimation 0.5s ease-in-out;
+}
+.pet-shop .cart .cart-items .cart-item {
+  margin: 0 10px;
+}
+.pet-shop .cart .cart-items .cart-item .cart-item-img img {
+  width: 70px;
+}
+.pet-shop .cart .cart-items .cart-item:nth-child(1) {
+  display: none;
 }
 .pet-shop .cart .cart-title {
   display: flex;

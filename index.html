@@ -72,19 +72,20 @@
                     <img src="./assets/side-banner-1.png" alt="" />
                 </div>
                 <div class="products-session-items-products">
-                    <div class="products-session-items-product">
+                    <div class="products-session-items-product" modal-key="1">
                         <img src="./assets/product-1.png" alt="">
-                        <h4>Morbi Condimentum egestas quam - 3m</h4>
+                        <h4 class="product-session-name">Morbi Condimentum egestas quam - 3m</h4>
                         <img class="products-session-items-product-rate" src="./assets/rate.png" alt="" />
-                        <span><strong>R$18,90</strong> <small><s>R$35,90</s></small></span>
-                        <button onclick="btnComprar()">COMPRAR</button>
+                        <span><strong class="product-session-price">R$18,90</strong>
+                            <small><s>R$35,90</s></small></span>
+                        <button onclick="btnComprar()" class="button-add-cart">COMPRAR</button>
                     </div>
                     <div class="products-session-items-product">
                         <img src="./assets/product-2.png" alt="">
                         <h4>Vivamus quam ex, ultricies et blandit sed</h4>
                         <img class="products-session-items-product-rate" src="./assets/rate.png" alt="" />
                         <span><strong>R$18,90</strong> <small><s>R$35,90</s></small></span>
-                        <button>COMPRAR</button>
+                        <button onclick="btnComprar()" class="button-add-cart">COMPRAR</button>
                     </div>
                 </div>
             </div>
@@ -98,7 +99,7 @@
                         <h4>Morbi Condimentum egestas quam - 3m</h4>
                         <img class="products-session-items-product-rate" src="./assets/rate.png" alt="" />
                         <span><strong>R$18,90</strong> <small><s>R$35,90</s></small></span>
-                        <button>COMPRAR</button>
+                        <button onclick="btnComprar()" class="button-add-cart">COMPRAR</button>
 
                     </div>
                     <div class="products-session-items-product">
@@ -106,7 +107,7 @@
                         <h4>Vivamus quam ex, ultricies et blandit sed</h4>
                         <img class="products-session-items-product-rate" src="./assets/rate.png" alt="" />
                         <span><strong>R$18,90</strong> <small><s>R$35,90</s></small></span>
-                        <button>COMPRAR</button>
+                        <button onclick="btnComprar()" class="button-add-cart">COMPRAR</button>
                     </div>
                 </div>
             </div>
@@ -117,10 +118,20 @@
                 <span onclick="openModal()">x</span>
             </div>
             <div class="cart-items" id="cart-items">
-                <div class="cart-item"></div>
+                <div class="cart-item" id="cart-item">
+                    <div class="cart-item-img">
+                        <img src="" alt="" />
+                    </div>
+                    <div class="cart-items-infos">
+                        <small class="cart-items-infos-name"></small>
+                        <small class="cart-items-infos-variables"></small>
+                        <small class="cart-items-infos-price"></small>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="produtos.js"></script>
     <script type="text/javascript" src="index.js"></script>
 </body>
 
