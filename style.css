@@ -182,9 +182,6 @@ body {
 .pet-shop .cart .cart-items .cart-item .cart-item-img img {
   width: 70px;
 }
-.pet-shop .cart .cart-items .cart-item:nth-child(1) {
-  display: none;
-}
 .pet-shop .cart .cart-title {
   display: flex;
   align-items: center;
